@@ -127,7 +127,7 @@ const About = () => {
                       y: -2,
                       boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
                     }}
-                    className="flex items-center space-x-3 p-4 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all duration-300 cursor-pointer group"
+                    className="flex items-center space-x-3 p-4 rounded-lg glass-card-hover hover-scale-up transition-all duration-300 cursor-pointer group"
                   >
                     <motion.div
                       whileHover={{ rotate: 360, scale: 1.1 }}
@@ -205,7 +205,7 @@ const About = () => {
                       y: -5,
                       boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.15)"
                     }}
-                    className={`w-full lg:w-5/12 p-6 rounded-xl bg-white dark:bg-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer ${
+                    className={`w-full lg:w-5/12 p-6 rounded-xl glass-card-hover transition-all duration-300 cursor-pointer ${
                       index % 2 === 0 ? 'lg:mr-auto lg:pr-8' : 'lg:ml-auto lg:pl-8'
                     }`}
                   >
@@ -280,7 +280,7 @@ const About = () => {
                   rotateY: 5,
                   boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
                 }}
-                className="p-6 rounded-xl bg-white dark:bg-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer text-center group"
+                className="p-6 rounded-xl glass-card-hover transition-all duration-300 cursor-pointer text-center group"
               >
                 <motion.div
                   whileHover={{ 

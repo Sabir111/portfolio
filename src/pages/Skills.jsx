@@ -89,22 +89,30 @@ const Skills = () => {
             {technicalSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9, rotateY: -15 }}
+                animate={{ opacity: 1, y: 0, scale: 1, rotateY: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                 whileHover={{ 
-                  scale: 1.03, 
-                  y: -5,
-                  boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.15)"
+                  scale: 1.05, 
+                  y: -8,
+                  rotateY: 5,
+                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
                 }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                className="glass-ultra hover-lift-rotate rounded-xl p-6 transition-all duration-300 cursor-pointer group card-3d magnetic"
               >
                 <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${skill.color} text-white mb-4 group-hover:shadow-lg transition-all duration-300`}
+                  whileHover={{ rotate: 360, scale: 1.2 }}
+                  transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+                  className={`relative inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-r ${skill.color} text-white mb-4 group-hover:shadow-xl transition-all duration-300 overflow-hidden`}
                 >
-                  <skill.icon size={24} />
+                  <skill.icon size={28} />
+                  
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"
+                    initial={{ x: '-100%' }}
+                    whileHover={{ x: '100%' }}
+                  />
                 </motion.div>
                 
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
@@ -124,25 +132,40 @@ const Skills = () => {
                     </motion.span>
                   </div>
                   
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden shadow-inner">
                     <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${skill.level}%` }}
-                      transition={{ duration: 1, delay: 1.2 + index * 0.1, ease: "easeOut" }}
-                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full relative overflow-hidden`}
+                      initial={{ width: 0, opacity: 0 }}
+                      animate={{ width: `${skill.level}%`, opacity: 1 }}
+                      transition={{ duration: 1.5, delay: 1.2 + index * 0.1, ease: "easeOut" }}
+                      className={`h-full bg-gradient-to-r ${skill.color} rounded-full relative overflow-hidden shadow-lg`}
                     >
+                      {/* Animated shimmer */}
                       <motion.div
                         animate={{ 
                           x: [-100, 100],
-                          opacity: [0, 1, 0]
+                          opacity: [0, 0.8, 0]
                         }}
                         transition={{ 
-                          duration: 2, 
+                          duration: 2.5, 
                           repeat: Infinity, 
                           delay: 2 + index * 0.1,
                           ease: "easeInOut"
                         }}
-                        className="absolute inset-0 bg-white opacity-30 rounded-full"
+                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full"
+                      />
+                      
+                      {/* Pulsing glow */}
+                      <motion.div
+                        animate={{ 
+                          opacity: [0.3, 0.8, 0.3],
+                          scale: [1, 1.02, 1]
+                        }}
+                        transition={{ 
+                          duration: 3, 
+                          repeat: Infinity,
+                          ease: "easeInOut"
+                        }}
+                        className="absolute inset-0 bg-white/20 rounded-full"
                       />
                     </motion.div>
                   </div>
@@ -177,27 +200,48 @@ const Skills = () => {
             {softSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 30, scale: 0.9, rotateX: -15 }}
+                animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                 whileHover={{ 
-                  scale: 1.05, 
-                  y: -8,
-                  rotateY: 5,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+                  scale: 1.08, 
+                  y: -12,
+                  rotateY: 8,
+                  rotateX: 5,
+                  boxShadow: "0 30px 60px -12px rgba(0, 0, 0, 0.3)"
                 }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer text-center group"
+                className="glass-ultra hover-tilt rounded-xl p-6 transition-all duration-300 cursor-pointer text-center group card-3d breathing"
               >
                 <motion.div
                   whileHover={{ 
-                    scale: 1.2, 
-                    rotate: [0, -10, 10, 0],
-                    color: "rgb(59, 130, 246)"
+                    scale: 1.3, 
+                    rotate: [0, -15, 15, 0],
                   }}
-                  transition={{ duration: 0.6 }}
-                  className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${skill.color} text-white mb-4 group-hover:shadow-lg transition-all duration-300`}
+                  transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
+                  className={`relative inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r ${skill.color} text-white mb-4 group-hover:shadow-2xl transition-all duration-300 overflow-hidden`}
                 >
-                  <skill.icon size={32} />
+                  <skill.icon size={36} />
+                  
+                  {/* Rotating ring */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full border-2 border-white/30"
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                  />
+                  
+                  {/* Pulsing glow */}
+                  <motion.div
+                    className="absolute inset-0 rounded-full bg-white/20"
+                    animate={{ 
+                      scale: [1, 1.2, 1],
+                      opacity: [0.5, 0.8, 0.5]
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
                 </motion.div>
                 
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
@@ -205,43 +249,82 @@ const Skills = () => {
                 </h3>
                 
                 <div className="relative">
-                  <div className="w-24 h-24 mx-auto relative">
-                    <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                  <div className="w-28 h-28 mx-auto relative">
+                    <svg className="w-28 h-28 transform -rotate-90" viewBox="0 0 100 100">
+                      {/* Background circle */}
                       <circle
                         cx="50"
                         cy="50"
-                        r="40"
+                        r="35"
                         stroke="currentColor"
-                        strokeWidth="8"
+                        strokeWidth="6"
                         fill="transparent"
                         className="text-gray-200 dark:text-gray-700"
                       />
+                      
+                      {/* Animated progress circle */}
                       <motion.circle
                         cx="50"
                         cy="50"
-                        r="40"
-                        stroke="currentColor"
-                        strokeWidth="8"
+                        r="35"
+                        stroke="url(#gradient)"
+                        strokeWidth="6"
                         fill="transparent"
-                        strokeDasharray={`${2 * Math.PI * 40}`}
-                        strokeDashoffset={`${2 * Math.PI * 40 * (1 - skill.level / 100)}`}
-                        className={`text-gradient-to-r ${skill.color}`}
-                        initial={{ strokeDashoffset: 2 * Math.PI * 40 }}
-                        animate={{ strokeDashoffset: 2 * Math.PI * 40 * (1 - skill.level / 100) }}
-                        transition={{ duration: 1.5, delay: 1.5 + index * 0.1, ease: "easeOut" }}
+                        strokeDasharray={`${2 * Math.PI * 35}`}
+                        strokeDashoffset={`${2 * Math.PI * 35 * (1 - skill.level / 100)}`}
+                        initial={{ strokeDashoffset: 2 * Math.PI * 35 }}
+                        animate={{ strokeDashoffset: 2 * Math.PI * 35 * (1 - skill.level / 100) }}
+                        transition={{ duration: 2, delay: 1.5 + index * 0.1, ease: "easeOut" }}
                         strokeLinecap="round"
+                        className="drop-shadow-lg"
                       />
+                      
+                      {/* Gradient definition */}
+                      <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#667eea" />
+                          <stop offset="50%" stopColor="#764ba2" />
+                          <stop offset="100%" stopColor="#f093fb" />
+                        </linearGradient>
+                      </defs>
                     </svg>
+                    
+                    {/* Animated percentage */}
                     <motion.div
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 2 + index * 0.1 }}
+                      transition={{ duration: 0.8, delay: 2 + index * 0.1, type: "spring", bounce: 0.4 }}
                       className="absolute inset-0 flex items-center justify-center"
                     >
-                      <span className="text-lg font-bold text-gray-900 dark:text-white">
+                      <motion.span 
+                        className="text-xl font-bold text-gray-900 dark:text-white"
+                        animate={{ 
+                          scale: [1, 1.1, 1],
+                        }}
+                        transition={{ 
+                          duration: 2, 
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                          delay: 3 + index * 0.1
+                        }}
+                      >
                         {skill.level}%
-                      </span>
+                      </motion.span>
                     </motion.div>
+                    
+                    {/* Glowing effect */}
+                    <motion.div
+                      className="absolute inset-0 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                      animate={{ 
+                        scale: [1, 1.1, 1],
+                        opacity: [0, 0.1, 0]
+                      }}
+                      transition={{ 
+                        duration: 3, 
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
                   </div>
                 </div>
               </motion.div>
@@ -281,7 +364,7 @@ const Skills = () => {
                   y: -5,
                   boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.15)"
                 }}
-                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                className="glass-card-hover rounded-xl p-6 transition-all duration-300 cursor-pointer group"
               >
                 <motion.div
                   whileHover={{ rotate: 5, scale: 1.1 }}

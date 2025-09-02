@@ -127,13 +127,13 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="card">
-                                  <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="flex items-center space-x-3 mb-6"
-                  >
+                            <div className="card glass-card-hover hover-scale-up">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="flex items-center space-x-3 mb-6"
+                >
                     <motion.div 
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
@@ -257,7 +257,7 @@ const Contact = () => {
               className="space-y-8"
             >
               {/* Contact Details */}
-              <div className="card">
+              <div className="card glass-card-hover hover-scale-up">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
                   Contact Information
                 </h3>
@@ -298,7 +298,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="card">
+              <div className="card glass-card-hover hover-scale-up">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
                   Follow Me
                 </h3>
@@ -329,7 +329,7 @@ const Contact = () => {
               </div>
 
               {/* Features */}
-              <div className="card">
+              <div className="card glass-card-hover hover-scale-up">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
                   Why Work With Me
                 </h3>
