@@ -129,7 +129,7 @@ const Home = () => {
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     className="w-3 h-3 bg-primary-500 rounded-full"
                   />
-                  <p className="text-lg text-primary-600 dark:text-primary-400 font-medium">
+                  <p className="text-lg font-semibold text-super-contrast">
                     Hello, I'm
                   </p>
                 </motion.div>
@@ -138,40 +138,53 @@ const Home = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-                  className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight"
+                  className="text-5xl lg:text-6xl font-bold leading-tight"
                 >
                   <motion.span
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.7 }}
+                    className="text-super-contrast"
                   >
                     Sabir
                   </motion.span>{' '}
-                                      <motion.span
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 0.9 }}
-                      className="text-gradient-primary"
-                    >
-                      Ali
-                    </motion.span>
+                  <motion.span
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.9 }}
+                    className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
+                    style={{
+                      WebkitTextStroke: '1px rgba(102, 126, 234, 0.3)',
+                      textShadow: '0 0 20px rgba(102, 126, 234, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3)',
+                      fontWeight: '800',
+                      filter: 'drop-shadow(0 0 10px rgba(102, 126, 234, 0.3))'
+                    }}
+                  >
+                    Ali
+                  </motion.span>
                 </motion.h1>
                 
-                                  <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 1.1 }}
-                    className="text-3xl lg:text-4xl font-semibold text-gradient-secondary"
-                  >
-                    Full Stack Developer
-                  </motion.h2>
+                <motion.h2
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1.1 }}
+                  className="text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent"
+                  style={{
+                    WebkitTextStroke: '1px rgba(240, 147, 251, 0.3)',
+                    textShadow: '0 0 15px rgba(240, 147, 251, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)',
+                    fontWeight: '700',
+                    filter: 'drop-shadow(0 0 8px rgba(240, 147, 251, 0.3))'
+                  }}
+                >
+                  Full Stack Developer
+                </motion.h2>
               </div>
 
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 1.3 }}
-                className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-lg"
+                className="text-lg leading-relaxed max-w-lg text-theme-secondary"
               >
                 I build exceptional digital experiences that combine beautiful design with powerful functionality. 
                 Passionate about creating innovative solutions that make a difference.
@@ -359,13 +372,13 @@ const Home = () => {
                       className="space-y-3"
                     >
                       <motion.h3
-                        className="text-2xl font-bold text-gray-900 dark:text-white"
+                        className="text-2xl font-bold text-super-contrast"
                         whileHover={{ scale: 1.05 }}
                       >
                         Sabir Ali
                       </motion.h3>
                       <motion.p
-                        className="text-lg text-primary-600 dark:text-primary-400 font-semibold"
+                        className="text-lg text-primary-980 dark:text-primary-200 font-semibold"
                       >
                         Full Stack Developer
                       </motion.p>
@@ -374,7 +387,7 @@ const Home = () => {
                           opacity: [0.7, 1, 0.7]
                         }}
                         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        className="text-gray-600 dark:text-gray-400 font-medium"
+                        className="font-semibold text-super-contrast"
                       >
                         Ready to build something amazing?
                       </motion.p>
@@ -423,10 +436,14 @@ const Home = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
                   viewport={{ once: true }}
                   className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2"
+                  style={{
+                    textShadow: '0 0 8px rgba(255, 255, 255, 1), 0 2px 4px rgba(0, 0, 0, 0.5)',
+                    fontWeight: '800'
+                  }}
                 >
                   {stat.number}
                 </motion.div>
-                <p className="text-gray-600 dark:text-gray-400 font-medium">
+                <p className="font-bold text-super-contrast">
                   {stat.label}
                 </p>
               </motion.div>

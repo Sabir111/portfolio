@@ -56,10 +56,10 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-super-contrast mb-4">
             My Skills
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-super-contrast max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and soft skills that I bring to every project.
           </p>
         </motion.div>
@@ -115,7 +115,7 @@ const Skills = () => {
                   />
                 </motion.div>
                 
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                <h3 className="text-lg font-semibold text-super-contrast mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                   {skill.name}
                 </h3>
                 
@@ -244,7 +244,7 @@ const Skills = () => {
                   />
                 </motion.div>
                 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-super-contrast mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                   {skill.name}
                 </h3>
                 

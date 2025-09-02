@@ -54,10 +54,10 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl lg:text-5xl font-bold text-super-contrast mb-4">
               About Me
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-super-contrast max-w-2xl mx-auto">
               Get to know me better - my journey, skills, and what drives me in the world of technology.
             </p>
           </motion.div>
@@ -94,15 +94,15 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+                <h2 className="text-3xl font-bold text-super-contrast">
                   Full Stack Developer
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-lg text-super-contrast leading-relaxed">
                   I'm a passionate Full Stack Developer with a love for creating innovative digital solutions. 
                   My journey in technology started with curiosity and has evolved into a deep passion for building 
                   applications that make a difference in people's lives.
                 </p>
-                <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p className="text-lg text-super-contrast leading-relaxed">
                   I believe in writing clean, maintainable code and staying up-to-date with the latest technologies. 
                   When I'm not coding, you'll find me exploring new coffee shops, listening to music, or reading 
                   about the latest tech trends.

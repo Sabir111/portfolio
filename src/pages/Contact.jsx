@@ -112,10 +112,10 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-super-contrast mb-4">
               Get In Touch
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-super-contrast max-w-3xl mx-auto">
               I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.
             </p>
           </motion.div>

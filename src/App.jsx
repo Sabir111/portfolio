@@ -16,12 +16,9 @@ const AppContent = () => {
   return (
     <Router>
       <motion.div 
-        className="min-h-screen relative overflow-hidden"
-        animate={{
-          background: isDark 
-            ? 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%)'
-            : 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%)'
-        }}
+        className="min-h-screen relative overflow-hidden theme-bg"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
         {/* Global background pattern */}
@@ -33,8 +30,8 @@ const AppContent = () => {
         
         {/* Global cosmic background */}
         <motion.div
-          className="fixed inset-0 cosmic-bg opacity-20"
-          animate={{ opacity: isDark ? 0.3 : 0.15 }}
+          className="fixed inset-0 cosmic-bg"
+          animate={{ opacity: isDark ? 0.4 : 0.2 }}
           transition={{ duration: 0.8 }}
         />
         

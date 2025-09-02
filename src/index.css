@@ -23,13 +23,27 @@
   --gradient-holographic: linear-gradient(135deg, #ff006e 0%, #8338ec 25%, #3a86ff 50%, #06ffa5 75%, #ffbe0b 100%);
   --gradient-plasma: linear-gradient(135deg, #ff0080 0%, #ff8c00 25%, #40e0d0 50%, #ee82ee 75%, #98fb98 100%);
   
+  /* Background Theme Variables */
+  --bg-light: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+  --bg-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  --bg-overlay-light: rgba(248, 250, 252, 0.95);
+  --bg-overlay-dark: rgba(15, 23, 42, 0.95);
+  
   /* Glass morphism variables */
-  --glass-bg-light: rgba(255, 255, 255, 0.25);
-  --glass-bg-dark: rgba(0, 0, 0, 0.25);
-  --glass-border-light: rgba(255, 255, 255, 0.18);
-  --glass-border-dark: rgba(255, 255, 255, 0.15);
-  --glass-shadow-light: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  --glass-shadow-dark: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --glass-bg-light: rgba(255, 255, 255, 0.15);
+  --glass-bg-dark: rgba(0, 0, 0, 0.15);
+  --glass-border-light: rgba(255, 255, 255, 0.2);
+  --glass-border-dark: rgba(255, 255, 255, 0.1);
+  --glass-shadow-light: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  --glass-shadow-dark: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  /* Text Contrast Variables */
+  --text-primary-light: #0f172a;
+  --text-primary-dark: #f8fafc;
+  --text-secondary-light: #334155;
+  --text-secondary-dark: #cbd5e1;
+  --text-muted-light: #64748b;
+  --text-muted-dark: #94a3b8;
   
   /* Animation variables */
   --animation-speed-slow: 3s;
@@ -768,6 +782,77 @@
     0 0 20px currentColor;
 }
 
+/* Enhanced Text Visibility System */
+.text-theme-primary {
+  color: var(--text-primary-light) !important;
+  font-weight: 700;
+  text-shadow: 
+    0 1px 3px rgba(255, 255, 255, 0.8),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-theme-primary {
+  color: var(--text-primary-dark) !important;
+  text-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.8),
+    0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary-light) !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.dark .text-theme-secondary {
+  color: var(--text-secondary-dark) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.text-theme-muted {
+  color: var(--text-muted-light) !important;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.dark .text-theme-muted {
+  color: var(--text-muted-dark) !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* Legacy Support - Enhanced */
+.text-enhanced {
+  color: var(--text-primary-light) !important;
+  font-weight: 700;
+  text-shadow: 
+    0 1px 3px rgba(255, 255, 255, 0.8),
+    0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-enhanced {
+  color: var(--text-primary-dark) !important;
+  text-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.8),
+    0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+.text-super-contrast {
+  color: var(--text-primary-light) !important;
+  font-weight: 800;
+  text-shadow: 
+    0 0 6px rgba(255, 255, 255, 1),
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+.dark .text-super-contrast {
+  color: var(--text-primary-dark) !important;
+  text-shadow: 
+    0 0 6px rgba(0, 0, 0, 1),
+    0 2px 8px rgba(255, 255, 255, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
 /* Enhanced Card Transforms */
 .card-transform-3d {
   transform-style: preserve-3d;
@@ -1164,14 +1249,42 @@
     0 0 50px rgba(0, 0, 0, 0.2);
 }
 
+/* Enhanced Background System */
+.theme-bg {
+  background: var(--bg-light);
+  transition: background 0.5s ease;
+}
+
+.dark .theme-bg {
+  background: var(--bg-dark);
+}
+
+.theme-bg-overlay {
+  background: var(--bg-overlay-light);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+}
+
+.dark .theme-bg-overlay {
+  background: var(--bg-overlay-dark);
+}
+
 /* Cosmic Background */
 .cosmic-bg {
   background: 
-    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 50%),
-    radial-gradient(circle at 60% 60%, rgba(255, 180, 120, 0.2) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(255, 180, 120, 0.1) 0%, transparent 50%);
   animation: cosmicMove 20s ease infinite;
+}
+
+.dark .cosmic-bg {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 60% 60%, rgba(255, 180, 120, 0.05) 0%, transparent 50%);
 }
 
 @keyframes cosmicMove {

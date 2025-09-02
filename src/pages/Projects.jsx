@@ -67,10 +67,10 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h1 className="text-4xl lg:text-5xl font-bold text-super-contrast mb-4">
             My Projects
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-super-contrast max-w-2xl mx-auto">
             A collection of projects that showcase my skills, creativity, and passion for building innovative solutions.
           </p>
         </motion.div>
@@ -168,12 +168,12 @@ const Projects = () => {
               <div className="p-6">
                 <motion.h3
                   whileHover={{ color: "rgb(59, 130, 246)" }}
-                  className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300"
+                  className="text-xl font-bold text-super-contrast mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300"
                 >
                   {project.title}
                 </motion.h3>
                 
-                <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                <p className="text-super-contrast mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
