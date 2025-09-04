@@ -35,7 +35,7 @@ const Footer = () => {
                 <span className="text-white font-bold text-lg">S</span>
               </motion.div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">
-                Sabir
+                Sabir Ali
               </span>
             </motion.div>
             <p className="text-gray-600 dark:text-gray-400 max-w-xs">
