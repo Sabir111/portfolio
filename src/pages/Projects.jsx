@@ -22,7 +22,7 @@ const Projects = () => {
     {
       id: 2,
       title: 'Todo App',
-      description: 'A task management application built with React. Users can add, mark as complete and delete tasks. The app uses Context API for state management and ensures persistent storage using localStorage. Designed with responsive UI using Tailwind CSS for seamless experience across devices.',
+      description: 'A task management application built with React. Users can add, mark as complete, edit and delete tasks. The app uses Context API for state management and ensures persistent storage using localStorage. Designed with responsive UI using Tailwind CSS for seamless experience across devices.',
       image: '/project2.jpg',
       technologies: ['React', 'React Context API', 'TailwindCSS', 'useState'],
       category: 'frontend',
