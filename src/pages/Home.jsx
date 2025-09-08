@@ -155,9 +155,9 @@ const Home = () => {
                     className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
                     style={{
                       WebkitTextStroke: '1px rgba(102, 126, 234, 0.3)',
-                      textShadow: '0 0 20px rgba(102, 126, 234, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3)',
+                      // textShadow: '0 0 20px rgba(102, 126, 234, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3)',
                       fontWeight: '800',
-                      filter: 'drop-shadow(0 0 10px rgba(102, 126, 234, 0.3))'
+                      // filter: 'drop-shadow(0 0 10px rgba(102, 126, 234, 0.3))'
                     }}
                   >
                     Ali
@@ -171,7 +171,7 @@ const Home = () => {
                   className="text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent"
                   style={{
                     WebkitTextStroke: '1px rgba(240, 147, 251, 0.3)',
-                    textShadow: '0 0 15px rgba(240, 147, 251, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)',
+                    // textShadow: '0 0 15px rgba(240, 147, 251, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3)',
                     fontWeight: '700',
                     filter: 'drop-shadow(0 0 8px rgba(240, 147, 251, 0.3))'
                   }}
@@ -435,9 +435,9 @@ const Home = () => {
                   whileInView={{ scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
                   viewport={{ once: true }}
-                  className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2"
+                  className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-500 mb-2"
                   style={{
-                    textShadow: '0 0 8px rgba(255, 255, 255, 1), 0 2px 4px rgba(0, 0, 0, 0.5)',
+                    textShadow: '0 0 4px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.5)',
                     fontWeight: '800'
                   }}
                 >

@@ -75,6 +75,12 @@ const Contact = () => {
       name: 'Twitter',
       url: 'https://twitter.com/@ImSabir_',
       color: 'hover:bg-blue-400 hover:text-white'
+    },
+    {
+      icon: Mail,
+      name: 'Mail',
+      url: 'mailto:sabiralitanveer6@gmail.com',
+      color: 'hover:bg-blue-400 hover:text-white'
     }
   ];
 
