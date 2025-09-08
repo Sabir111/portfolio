@@ -21,16 +21,14 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'Todo App',
+      description: 'A task management application built with React. Users can add, mark as complete and delete tasks. The app uses Context API for state management and ensures persistent storage using localStorage. Designed with responsive UI using Tailwind CSS for seamless experience across devices.',
       image: '/project2.jpg',
-      technologies: ['React', 'Firebase', 'TailwindCSS', 'Framer Motion'],
+      technologies: ['React', 'React Context API', 'TailwindCSS', 'useState'],
       category: 'frontend',
-      github: 'https://github.com/Sabir111/task-manager',
-      live: 'https://task-manager-sabir.vercel.app',
+      github: 'https://github.com/Sabir111/todo-app',
+      live: 'https://sabir-todo.vercel.app',
       featured: true,
-      stars: 32,
-      forks: 8
     },
     {
       id: 3,
