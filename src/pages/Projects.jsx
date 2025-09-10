@@ -9,15 +9,13 @@ const Projects = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce application built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
+      description: 'Developed a Mini Amazon Clone using React, featuring product listing, search, add-to-cart, and checkout functionality. Implemented responsive UI and state management for smooth user experience',
       image: '/project1.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-      category: 'fullstack',
-      github: 'https://github.com/Sabir111/ecommerce',
-      live: 'https://ecommerce-sabir.vercel.app',
+      technologies: ['React Router DOM', 'React Context API', 'Axios', 'localStorage', 'Hot Module Replacement'],
+      category: 'frontend',
+      github: 'https://github.com/Sabir111/mini-amazon',
+      live: 'https://sabir-mini-amazon.vercel.app',
       featured: true,
-      stars: 45,
-      forks: 12
     },
     {
       id: 2,
@@ -30,19 +28,7 @@ const Projects = () => {
       live: 'https://sabir-todo.vercel.app',
       featured: true,
     },
-    {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather application that displays current weather conditions and forecasts for any location worldwide.',
-      image: '/project3.jpg',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'TailwindCSS'],
-      category: 'frontend',
-      github: 'https://github.com/Sabir111/weather-app',
-      live: 'https://weather-sabir.vercel.app',
-      featured: false,
-      stars: 28,
-      forks: 5
-    }
+    
   ];
 
   const filters = [
@@ -192,22 +178,7 @@ const Projects = () => {
                 </div>
 
                 {/* Project Stats */}
-                <div className="flex items-center justify-between mb-4 text-sm text-gray-500 dark:text-gray-400">
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="flex items-center space-x-1"
-                  >
-                    <Star size={14} className="text-yellow-500" />
-                    <span>{project.stars}</span>
-                  </motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    className="flex items-center space-x-1"
-                  >
-                    <Users size={14} className="text-blue-500" />
-                    <span>{project.forks}</span>
-                  </motion.div>
-                </div>
+                
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">

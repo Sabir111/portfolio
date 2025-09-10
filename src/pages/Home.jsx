@@ -400,57 +400,7 @@ const Home = () => {
         </div>
       </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="section-padding bg-gradient-to-r from-primary-50 via-purple-50 to-pink-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-800"
-      >
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            {[
-              { number: '1+', label: 'Years Experience' },
-              { number: '20+', label: 'Projects Completed' },
-              { number: '15+', label: 'Happy Clients' },
-              { number: '100%', label: 'Client Satisfaction' },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="text-center p-4 rounded-lg glass-card-hover hover-scale-up transition-all duration-300"
-              >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
-                  viewport={{ once: true }}
-                  className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-500 mb-2"
-                  style={{
-                    textShadow: '0 0 4px rgba(255, 255, 255, 0.2), 0 2px 4px rgba(0, 0, 0, 0.5)',
-                    fontWeight: '800'
-                  }}
-                >
-                  {stat.number}
-                </motion.div>
-                <p className="font-bold text-super-contrast">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
+      
     </div>
   );
 };

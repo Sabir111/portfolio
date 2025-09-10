@@ -9,8 +9,7 @@ const About = () => {
     { icon: MapPin, label: 'Location', value: 'Mayur Vihar Phase-3, New Delhi, India' },
     { icon: Mail, label: 'Email', value: 'sabiralitanveer6@gmail.com' },
     { icon: Phone, label: 'Phone', value: '+91 9759998880' },
-    { icon: Globe, label: 'Website', value: 'www.sabir.dev' },
-    { icon: Award, label: 'Experience', value: '1+ Years' },
+    
   ];
 
   const journey = [
