@@ -28,7 +28,17 @@ const Projects = () => {
       live: 'https://sabir-todo.vercel.app',
       featured: true,
     },
-    
+    {
+      id: 3,
+      title: 'Sabir Social Vibe',
+      description: 'A full-stack social media platform built with a Node.js/Express backend and a React (Vite + Tailwind) frontend. Features secure JWT-based authentication, user profiles with Cloudinary image uploads, posts, likes, comments, followers, and notification flows.',
+      image: '/project3.jpg',
+      technologies: ['Node.js', 'Express', 'React', 'MongoDB', 'JWT', 'Cloudinary'],
+      category: 'fullstack',
+      github: 'https://github.com/Sabir111/SabirSocialVibe',
+      live: 'https://sabir-social-vibe.vercel.app',
+      featured: true,
+    }
   ];
 
   const filters = [
